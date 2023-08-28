@@ -18,7 +18,7 @@ func main() {
 	var excludeFuturePlannedDeprecation bool
 	flag.StringVar(&commaSeparatedRegionsString, "regions", "", "target regions to scan; this value can have multiple regions as comma-separated string")
 	flag.StringVar(&assumeRoleARN, "assume-role-arn", "", "a role ARN for assume-role")
-	flag.StringVar(&outputStyle, "output", "json", "the output format: \"json\" or \"csv\"")
+	flag.StringVar(&outputStyle, "output", "json", "the output format: \"json\", \"csv\", or \"tsv\"")
 	flag.BoolVar(&allRegions, "all-regions", false, "scan all lambda supported regions; this parameter take priority over the -regions")
 	flag.BoolVar(&excludeFuturePlannedDeprecation, "without-future-planned-deprecation", false, "exclude the future planned deprecations from the result")
 	flag.Parse()
@@ -32,10 +32,16 @@ func main() {
 	if outputStyle == "json" {
 		presenter = &collector.JSONPresenter{}
 	} else if outputStyle == "csv" {
-		presenter = &collector.CSVPresenter{}
+		presenter = &collector.CSVPresenter{
+			Delimiter: ',',
+		}
+	} else if outputStyle == "tsv" {
+		presenter = &collector.CSVPresenter{
+			Delimiter: '\t',
+		}
 	} else {
 		flag.Usage()
-		log.Fatalf("[ERROR] invalid `-output` parameter; this must be \"json\" or \"csv\"")
+		log.Fatalf("[ERROR] invalid `-output` parameter; this must be \"json\", \"csv\", or \"tsv\"")
 	}
 
 	regions := collector.AllLambdaSupportedRegions

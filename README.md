@@ -11,7 +11,7 @@ Usage of deprecated_lambda_func_collector:
   -assume-role-arn string
         a role ARN for assume-role
   -output string
-        the output format: "json" or "csv" (default "json")
+        the output format: "json", "csv", or "tsv" (default "json")
   -regions string
         target regions to scan; this value can have multiple regions as comma-separated string
   -without-future-planned-deprecation

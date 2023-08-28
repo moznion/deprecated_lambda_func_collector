@@ -7,6 +7,7 @@ import (
 )
 
 type CSVPresenter struct {
+	Delimiter rune
 }
 
 func (p *CSVPresenter) Render(deprecatedFunctions []*DeprecatedFunction) (string, error) {
@@ -18,6 +19,7 @@ func (p *CSVPresenter) Render(deprecatedFunctions []*DeprecatedFunction) (string
 
 	buff := &bytes.Buffer{}
 	w := csv.NewWriter(buff)
+	w.Comma = p.Delimiter
 
 	for _, record := range records {
 		if err := w.Write(record); err != nil {
