@@ -18,9 +18,9 @@ func main() {
 	var excludeFuturePlannedDeprecation bool
 	flag.StringVar(&commaSeparatedRegionsString, "regions", "", "target regions to scan; this value can have multiple regions as comma-separated string")
 	flag.StringVar(&assumeRoleARN, "assume-role-arn", "", "a role ARN for assume-role")
-	flag.StringVar(&outputStyle, "output", "json", "the output format: \"json\" or \"csv\" (default: \"json\")")
-	flag.BoolVar(&allRegions, "all-regions", false, "scan all regions; this parameter take priority over the `-regions`.")
-	flag.BoolVar(&excludeFuturePlannedDeprecation, "without-future-planned-deprecation", false, "exclude the future planned deprecations from the result (default: false)")
+	flag.StringVar(&outputStyle, "output", "json", "the output format: \"json\" or \"csv\"")
+	flag.BoolVar(&allRegions, "all-regions", false, "scan all lambda supported regions; this parameter take priority over the -regions")
+	flag.BoolVar(&excludeFuturePlannedDeprecation, "without-future-planned-deprecation", false, "exclude the future planned deprecations from the result")
 	flag.Parse()
 
 	if commaSeparatedRegionsString == "" && !allRegions {

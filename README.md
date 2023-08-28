@@ -6,14 +6,16 @@ A toolchain to scan the deprecated AWS Lambda functions.
 
 ```
 Usage of deprecated_lambda_func_collector:
-  -all-regions -regions
-        scan all regions; this parameter take priority over the -regions.
+  -all-regions
+        scan all lambda supported regions; this parameter take priority over the -regions
   -assume-role-arn string
         a role ARN for assume-role
+  -output string
+        the output format: "json" or "csv" (default "json")
   -regions string
         target regions to scan; this value can have multiple regions as comma-separated string
   -without-future-planned-deprecation
-        exclude the future planned deprecations from the result (default: false)
+        exclude the future planned deprecations from the result
 ```
 
 Example:
