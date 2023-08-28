@@ -2,6 +2,8 @@
 
 A toolchain to scan the deprecated AWS Lambda functions.
 
+This tool aims to collect the functions which run on the deprecated runtime in the specific AWS accounts/regions according to the "Lambda runtimes" information: https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
+
 ## Usage: CLI
 
 ```
