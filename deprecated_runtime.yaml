@@ -1,0 +1,57 @@
+# data source: https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
+---
+- runtime: 'dotnetcore3.1'
+  deprecation_date: 'May 3, 2023'
+- runtime: 'nodejs12.x'
+  deprecation_date: 'Apr 30, 2023'
+- runtime: 'python3.6'
+  deprecation_date: 'Aug 29, 2022'
+- runtime: 'python2.7'
+  deprecation_date: 'May 30, 2022'
+- runtime: 'dotnet5.0'
+  deprecation_date: 'May 10, 2022'
+- runtime: 'dotnetcore2.1'
+  deprecation_date: 'Apr 13, 2022'
+- runtime: 'ruby2.5'
+  deprecation_date: 'Mar 31, 2022'
+- runtime: 'nodejs10.x'
+  deprecation_date: 'Feb 14, 2022'
+- runtime: 'nodejs8.10'
+  deprecation_date: 'Mar 6, 2020'
+- runtime: 'nodejs4.3'
+  deprecation_date: 'Mar 5, 2020'
+- runtime: 'nodejs6.10'
+  deprecation_date: 'Aug 12, 2019'
+- runtime: 'dotnetcore1.0'
+  deprecation_date: 'Jul 30, 2019'
+- runtime: 'dotnetcore2.0'
+  deprecation_date: 'May 30, 2019'
+- runtime: 'nodejs4.3-edge'
+  deprecation_date: 'Apr 30, 2019'
+- runtime: 'nodejs'
+  deprecation_date: 'Oct 31, 2016'
+- runtime: 'nodejs16.x'
+  deprecation_date: 'Mar 11, 2024'
+  planned: true
+- runtime: 'nodejs14.x'
+  deprecation_date: 'Nov 27, 2023'
+  planned: true
+- runtime: 'python3.7'
+  deprecation_date: 'Nov 27, 2023'
+  planned: true
+- runtime: 'java8'
+  deprecation_date: 'Dec 31, 2023'
+  planned: true
+- runtime: 'dotnet7'
+  deprecation_date: 'May 14, 2024'
+  planned: true
+- runtime: 'go1.x'
+  deprecation_date: 'Dec 31, 2023'
+  planned: true
+- runtime: 'ruby2.7'
+  deprecation_date: 'Dec 7, 2023'
+  planned: true
+- runtime: 'provided'
+  deprecation_date: 'Dec 31, 2023'
+  planned: true
+
